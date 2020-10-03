@@ -75,12 +75,13 @@ class MyApp extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: const EdgeInsets.fromLTRB(10.0,10,10,0),
               child: Column(
                 children: [
                   Container(
                       height: 100,
                       width: 100,
+                      margin: EdgeInsets.fromLTRB(0, 150, 0, 200),
                       child: Center(
                           child: Text(
                         'Container 5',
@@ -96,10 +97,10 @@ class MyApp extends StatelessWidget {
                         height: 100,
                         width: 100,
                         child: Center(
-                            child: Text(
-                          'CON 6',
-                          style: TextStyle(fontSize: 30),
-                        )),
+                            child: Align(
+                                alignment: Alignment.topLeft,
+                                child: Text('Con 6',
+                                    style: TextStyle(fontSize: 30)))),
                         decoration: BoxDecoration(
                           shape: BoxShape.rectangle,
                           color: Colors.red,
