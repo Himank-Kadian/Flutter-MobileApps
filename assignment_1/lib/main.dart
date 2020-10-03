@@ -79,9 +79,31 @@ class MyApp extends StatelessWidget {
               child: Column(
                 children: [
                   Container(
-                      ),
-                  Container(
-                    
+                      height: 100,
+                      width: 100,
+                      child: Center(
+                          child: Text(
+                        'Container 5',
+                        style: TextStyle(color: Colors.white),
+                      )),
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.black,
+                        border: Border.all(color: Colors.white, width: 3),
+                      )),
+                  Expanded(
+                    child: Container(
+                        height: 100,
+                        width: 100,
+                        child: Center(
+                            child: Text(
+                          'CON 6',
+                          style: TextStyle(fontSize: 30),
+                        )),
+                        decoration: BoxDecoration(
+                          shape: BoxShape.rectangle,
+                          color: Colors.red,
+                        )),
                   ),
                 ],
               ),
