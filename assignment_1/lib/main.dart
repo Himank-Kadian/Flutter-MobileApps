@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -16,13 +18,14 @@ class MyApp extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.fromLTRB(10.0, 0, 10, 0),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.start,
+                //crossAxisAlignment: CrossAxisAlignment.end,
+                //mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Container(
                       padding: EdgeInsets.all(10.0),
                       height: 100.0,
                       width: 100.0,
+                      margin: EdgeInsets.only(left: 10),
                       child: Center(
                         child: Text('Container 1'),
                       ),
@@ -31,18 +34,22 @@ class MyApp extends StatelessWidget {
                         shape: BoxShape.rectangle,
                         color: Colors.amber,
                       )),
-                  Container(
-                      padding: EdgeInsets.all(10.0),
-                      height: 100.0,
-                      width: 100.0,
-                      transform: Matrix4.rotationZ((22 / 7) / 4),
-                      child: Center(
-                        child: Text('Container 2'),
-                      ),
-                      decoration: BoxDecoration(
-                        shape: BoxShape.rectangle,
-                        color: Colors.white,
-                      )),
+                  Transform.rotate(
+                    angle: pi/4,
+                    child: Container(
+                    padding: EdgeInsets.all(10.0),
+                    margin: EdgeInsets.fromLTRB(10,0,0,0),
+                    height: 100.0,
+                    width: 100.0,
+                    //transform: Matrix4.rotationZ((22 / 7) / 4),
+                    child: Center(
+                      child: Text('Container 2'),
+                    ),
+                    decoration: BoxDecoration(
+                      shape: BoxShape.rectangle,
+                      color: Colors.white,
+                    )),
+                  ),
                 ],
               ),
             ),
