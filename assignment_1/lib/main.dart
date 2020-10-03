@@ -50,11 +50,26 @@ class MyApp extends StatelessWidget {
               padding: const EdgeInsets.fromLTRB(10.0, 0, 10, 0),
               child: Column(
                 children: [
-                  Container(
-                    
+                  Expanded(
+                    child: Container(
+                      height: 100.0,
+                      width: 100.0,
+                      color: Colors.yellow,
+                      margin: EdgeInsets.all(10),
+                      child: Align(
+                          alignment: Alignment.bottomCenter,
+                          child: Text('Container 3')),
+                    ),
                   ),
-                  Container(
-                    
+                  Expanded(
+                    child: Container(
+                        height: 100.0,
+                        width: 100.0,
+                        color: Colors.blue,
+                        margin: EdgeInsets.all(10),
+                        child: Align(
+                            alignment: Alignment.centerRight,
+                            child: Text('Container 4'))),
                   ),
                 ],
               ),
