@@ -18,12 +18,12 @@ class _MyFirstPageState extends State<MyFirstPage> {
         print('onPressed1 returning address of anon func but NOT running it');
         return () {
           setState(() {
-             _clickCount++;
-          _msg1 = "Clicked $_clickCount";
+            //increases counter and displays it as text.
+            _clickCount++;
+            _msg1 = "Clicked $_clickCount";
           });
-          print('Anon func now running as button pressed : '+_clickCount.toString());
-          //_msg1 = "Clicked" +_clickCount.toString();
-          //_clickCount = _clickCount + 1;
+          print('Anon func now running as button pressed : ' +
+              _clickCount.toString());
           //Because there are no () this anonymous function
           //is NOT called but the address of it is returned to who ever
           //called onPressed1.
@@ -43,6 +43,7 @@ class _MyFirstPageState extends State<MyFirstPage> {
             'onPressed2 returning a null as the result of running the anonymous function');
         return () {
           setState(() {
+            //resets first button values to default
             _msg1 = 'Click Me';
             _clickCount = 0;
           });
@@ -85,12 +86,12 @@ class _MyFirstPageState extends State<MyFirstPage> {
                       //_enabled is false.
                       setState(() {
                         if (_enabled) {
-                          if (_clickCount == 0){
+                          //checks if the was pressed earlier.
+                          if (_clickCount == 0) {
                             _msg1 = "Click Me";
                             _reset = "Reset";
                             print('_enabled is true');
-                          }
-                          else {
+                          } else {
                             _msg1 = "Clicked $_clickCount";
                             _reset = "Reset";
                             print('_enabled is true again!');
@@ -110,49 +111,52 @@ class _MyFirstPageState extends State<MyFirstPage> {
                 Container(
                   margin: EdgeInsets.all(20),
                   child: MaterialButton(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)),
-                    elevation: 8,
-                    textColor: Colors.red.shade100,
-                    color: Colors.redAccent,
-                    highlightColor: Colors.blue,
-                    splashColor: Colors.green.shade300,
-                    padding: EdgeInsets.all(20.0),
-                    //onPressed1 is run every time the build is run,
-                    //because of the ().
-                    //If _enabled is true onPressed1 will return
-                    //the address of an anonymous function that
-                    //will only run when the button is pressed.
-                    //At this time the button will appear and be enabled.
-                    //If _enabled is false onPressed1 will return
-                    //null and the button will disappear and be disabled.
-                    onPressed: onPressed1(),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      elevation: 8,
+                      textColor: Colors.red.shade100,
+                      color: Colors.redAccent,
+                      highlightColor: Colors.blue,
+                      splashColor: Colors.green.shade300,
+                      padding: EdgeInsets.all(20.0),
+                      //onPressed1 is run every time the build is run,
+                      //because of the ().
+                      //If _enabled is true onPressed1 will return
+                      //the address of an anonymous function that
+                      //will only run when the button is pressed.
+                      //At this time the button will appear and be enabled.
+                      //If _enabled is false onPressed1 will return
+                      //null and the button will disappear and be disabled.
+                      onPressed: onPressed1(),
 
-                    //If we call onPressed2 instead of onPressed1 the
-                    //anonymous function will run but the button
-                    //will NOT appear, THIS DOES NOT WORK.
-                    //onPressed: onPressed2(),
+                      //UPDATE: onPressed2 has since been changed to be used as the Reset button functionality
 
-                    //The text of the button works separately from the button
-                    //itself so we must update it when the switch is changed.
-                    child: Text('$_msg1')
-                  ),
+                      //If we call onPressed2 instead of onPressed1 the
+                      //anonymous function will run but the button
+                      //will NOT appear, THIS DOES NOT WORK.
+                      //onPressed: onPressed2(),
+
+                      //The text of the button works separately from the button
+                      //itself so we must update it when the switch is changed.
+                      child: Text('$_msg1')),
                 ),
                 Container(
-                  margin: EdgeInsets.all(20),
-                  child: MaterialButton(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)),
-                    elevation: 8,
-                    textColor: Colors.blue.shade100,
-                    color: Colors.blueAccent,
-                    highlightColor: Colors.red,
-                    splashColor: Colors.green.shade300,
-                    padding: EdgeInsets.all(20.0),
-                    onPressed: onPressed2(),
-                    child: Text(_reset),
-                  )
-                ),
+                    //creates button (Reset)
+                    //Displays text on button from declared field(_reset)
+                    //when pressed calls method
+                    margin: EdgeInsets.all(20),
+                    child: MaterialButton(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      elevation: 8,
+                      textColor: Colors.blue.shade100,
+                      color: Colors.blueAccent,
+                      highlightColor: Colors.red,
+                      splashColor: Colors.green.shade300,
+                      padding: EdgeInsets.all(20.0),
+                      onPressed: onPressed2(),
+                      child: Text(_reset),
+                    )),
               ],
             ),
           ],
