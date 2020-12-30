@@ -1,8 +1,6 @@
-# FlutterProjects
+## app1
 
-Contains all my flutter projects from DMIT2504
-
-## assignment_1
+App made to learn basic flutter widgets like rows, columns and containers.
 
 Created a flutter app with 1 row and 3 columns.
 All columns have 2 containers each. 
