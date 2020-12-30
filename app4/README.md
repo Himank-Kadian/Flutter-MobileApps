@@ -1,16 +1,7 @@
-# lab_1
+# App4
 
-A new Flutter project.
+App makes use of API to get current stock prices.
+It uses the list .toMap concept to build a ListView of ListTile for the stock entered.
+Sqlflite is used to add and delete stock information to the database.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This is a complete app with proper organization for pages.
