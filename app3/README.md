@@ -1,6 +1,6 @@
-# lab_1
+# App3
 
-A new Flutter project.
+Carousel flutter app for a drinks store.
 
 ## Getting Started
 
