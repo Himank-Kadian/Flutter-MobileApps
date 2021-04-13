@@ -1,6 +1,8 @@
 # FlutterProjects
 
-Contains all my flutter apps from DMIT2504
+Contains various mobile apps made using flutter and dart.
+
+Relevant Course: Android Development (DMIT2504)
 
 ## Getting Started
 
