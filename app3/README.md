@@ -4,6 +4,6 @@ Carousel flutter app for a drinks store.
 Displays variety of drinks with their name and images in a gridview.
 Shows a snackbar msg when added to cart.
 
-![image](https://user-images.githubusercontent.com/60160747/122819539-7335e400-d28f-11eb-8178-014214fdc5bd.png)
-![image](https://user-images.githubusercontent.com/60160747/122819565-7fba3c80-d28f-11eb-86f2-588a085069b9.png)
-![image](https://user-images.githubusercontent.com/60160747/122819580-83e65a00-d28f-11eb-8438-db06f940d952.png)
+![image](https://user-images.githubusercontent.com/60160747/122834354-48558b00-d2a3-11eb-88f9-37ec3dcb9a65.png)
+![image](https://user-images.githubusercontent.com/60160747/122834362-4d1a3f00-d2a3-11eb-8257-a0612b841f6c.png)
+![image](https://user-images.githubusercontent.com/60160747/122834376-54414d00-d2a3-11eb-92ee-21b8617e32e4.png)
