@@ -1,7 +1,7 @@
 # App1
 
-This Flutter app contains various different Containers. Each container has different properties like text, color, size, shape and border.
-These containers are kept in different rows and columns.
+This Flutter app contains 6 different Containers. Each container differs in properties like text, color, size, shape and border.
+These containers are placed in specific rows and columns.
 
 ![image](https://user-images.githubusercontent.com/60160747/122817324-9f039a80-d28c-11eb-9443-f6a65ccde51a.png)
 
