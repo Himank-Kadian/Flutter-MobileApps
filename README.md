@@ -2,6 +2,8 @@
 
 Contains various mobile apps made using flutter and dart.
 
+Click on each of the app to learn more about them.
+
 Relevant Course: Android Development (DMIT2504)
 
 ## Getting Started
